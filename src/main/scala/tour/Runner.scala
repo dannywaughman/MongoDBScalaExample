@@ -1,12 +1,12 @@
 package tour
 import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
-import tour.Names._
+import tour.Customers._
 
 object Runner extends App {
 
   val mongoClient: MongoClient = MongoClient()
   val database: MongoDatabase = mongoClient.getDatabase("myfirstdb")
-  val collection: MongoCollection[Document] = database.getCollection("People")
+  val customers: MongoCollection[Document] = database.getCollection("Customers")
 
   var running = true
 
@@ -14,10 +14,10 @@ object Runner extends App {
 
     println()
     println("What would you like to do?")
-    println("ADD - Add someone to the database")
-    println("READ - Read the people in the database")
-    println("UPDATE - Update an existing person in the database")
-    println("DELETE - Delete someone from the database")
+    println("ADD - Add a customer to the database")
+    println("READ - Read the customers in the database")
+    println("UPDATE - Update an existing customer in the database")
+    println("DELETE - Delete a customer from the database")
     println("Type 'exit' to exit the program")
     val input = scala.io.StdIn.readLine.toLowerCase()
 
