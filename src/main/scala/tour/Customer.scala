@@ -5,7 +5,6 @@ import tour.Runner._
 import tour.Helpers._
 import org.mongodb.scala.model.Updates._
 
-
 class Customer {
 
   def create(): Unit = {

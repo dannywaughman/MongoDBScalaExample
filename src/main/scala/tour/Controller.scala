@@ -1,6 +1,6 @@
 package tour
 
-import tour.Runner.{customer, running,item}
+import tour.Runner.{customer, running,item,order}
 
 object Controller {
 
@@ -24,6 +24,7 @@ object Controller {
         case "delete" => customer.delete()
         case "back" => inCustomers = false
         case "exit" => running = false
+        case _ => println("Enter a valid option please")
       }
     }
 }
@@ -47,6 +48,31 @@ object Controller {
         case "delete" => item.delete()
         case "back" => inItems = false
         case "exit" => running = false
+        case _ => println("Enter a valid option please")
+      }
+    }
+  }
+  def orderController():Unit = {
+    var inOrders = true
+    while(inOrders) {
+      println()
+      println("What would you like to do?")
+      println("ADD - Add an order to the database")
+      println("READ - Read the orders in the database")
+      println("UPDATE - Update an existing order in the database")
+      println("DELETE - Delete an order from the database")
+      println("Type 'back' to go back or 'exit' to exit the program")
+
+      val input = scala.io.StdIn.readLine.toLowerCase()
+
+      input match {
+        case "add" => order.create()
+        case "read" => order.read()
+        case "update" => order.update()
+        case "delete" => order.delete()
+        case "back" => inOrders = false
+        case "exit" => running = false
+        case _ => println("Enter a valid option please")
       }
     }
   }
