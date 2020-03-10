@@ -6,7 +6,7 @@ import tour.Helpers._
 import org.mongodb.scala.model.Updates._
 
 
-object Customers {
+class Customer {
 
   def create(): Unit = {
     println("Select the id of the customer you want to add: ")
