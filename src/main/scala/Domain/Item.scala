@@ -1,10 +1,10 @@
-package tour
+package Domain
 
-import org.mongodb.scala.{Completed, Document, Observer}
 import org.mongodb.scala.model.Filters.equal
 import org.mongodb.scala.model.Updates.set
-import tour.Runner._
+import org.mongodb.scala.{Completed, Document, Observer}
 import tour.Helpers._
+import tour.Main._
 
 class Item {
 

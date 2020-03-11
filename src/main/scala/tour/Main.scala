@@ -1,17 +1,19 @@
 package tour
+import Domain.{Customer, Item, Order}
 import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
 import tour.Controller._
 
-object Runner extends App {
+object Main extends App {
 
-    val mongoClient: MongoClient = MongoClient()
-    val database: MongoDatabase = mongoClient.getDatabase("myfirstdb")
-    val customers: MongoCollection[Document] = database.getCollection("Customers")
-    val customer = new Customer
-    val items: MongoCollection[Document] = database.getCollection("Items")
-    val item = new Item
-    val orders: MongoCollection[Document] = database.getCollection("Orders")
-    val order = new Order
+//val codecRegistry =
+  val mongoClient: MongoClient = MongoClient()
+  val database: MongoDatabase = mongoClient.getDatabase("myfirstdb")
+  val customers: MongoCollection[Document] = database.getCollection("Customers")
+  val customer = new Customer
+  val items: MongoCollection[Document] = database.getCollection("Items")
+  val item = new Item
+  val orders: MongoCollection[Document] = database.getCollection("Orders")
+  val order = new Order
 
   var running = true
 

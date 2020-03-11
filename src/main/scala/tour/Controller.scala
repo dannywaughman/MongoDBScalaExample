@@ -1,6 +1,6 @@
 package tour
 
-import tour.Runner.{customer, running,item,order}
+import tour.Main.{customer, running,item,order}
 
 object Controller {
 
@@ -23,7 +23,7 @@ object Controller {
         case "update" => customer.update()
         case "delete" => customer.delete()
         case "back" => inCustomers = false
-        case "exit" => running = false
+        case "exit" => running = false; inCustomers = false
         case _ => println("Enter a valid option please")
       }
     }
@@ -47,7 +47,7 @@ object Controller {
         case "update" => item.update()
         case "delete" => item.delete()
         case "back" => inItems = false
-        case "exit" => running = false
+        case "exit" => running = false; inItems = false
         case _ => println("Enter a valid option please")
       }
     }
@@ -71,7 +71,7 @@ object Controller {
         case "update" => order.update()
         case "delete" => order.delete()
         case "back" => inOrders = false
-        case "exit" => running = false
+        case "exit" => running = false; inOrders = false
         case _ => println("Enter a valid option please")
       }
     }

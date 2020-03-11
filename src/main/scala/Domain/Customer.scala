@@ -1,9 +1,10 @@
-package tour
+package Domain
+
 import org.mongodb.scala._
 import org.mongodb.scala.model.Filters._
-import tour.Runner._
-import tour.Helpers._
 import org.mongodb.scala.model.Updates._
+import tour.Helpers._
+import tour.Main._
 
 class Customer {
 
